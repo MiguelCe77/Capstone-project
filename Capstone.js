@@ -1,12 +1,17 @@
+var queryURL = "http://smashlounge.com/api/techs/all"
+
+
 function getPokemonAjax() {
   $.ajax({
     url: queryURL,
     //dataType: 'jsonp',
     success: function(data) {
-      displayPokemon(data)
+      displayTech(data)
     }
   })
 }
+
+
 
 function myFunction() {
     var x = document.getElementById("navDemo");
