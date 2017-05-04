@@ -1,5 +1,5 @@
-var queryURL = "http://smashlounge.com/api/chars/all"
-var numberOfCharacters = 26
+var queryURL = "http://smashlounge.com/api/techs/all"
+var numberOfTechs = 39
 
 function randomNumber(min,max)
 {
@@ -7,36 +7,33 @@ function randomNumber(min,max)
 }
 
 
-function getCharacterAjax() {
+function getTechAjax() {
   $.ajax({
     url: queryURL,
     //dataType: 'jsonp',
     success: function(data) {
-      displayCharacter(data)
+      displayTech(data)
     }
   })
 }
 
-function randomCharacterButtonClick() {
-  var rand = randomNumber(1, numberOfCharacters)
-
-  // when the user clicks the button, you will do two things:
-  // 1) Assign a string to queryURL
-  // 2) call the getPokemonAjax() function
-   getCharacterAjax()
+function techButtonClick() {
+  queryURL = "http://swapi.co/api/people/" + rand + "/"
+  console.log(queryURL)
+  getPersonAJAX()
 }
 
-function displayCharacter(data) {
+function displayTech(data) {
 
-  var name = data['name']
-  var guide = data['guide']
+  var tech = data['tech']
+  var info = data['description']
 
   var textString = "<p>Name: " + name + "</br>"
   textString += "Info: " + guide + "</br>"
 
   document.getElementById("datalist").innerHTML += textString
 
-   getCharacterAjax()
+   getTechAjax()
 }
 
 
