@@ -1,4 +1,4 @@
-var queryURL = "http://smashlounge.com/api/techs/all"
+var queryURL = "http://smashlounge.com/api/techs/"
 var numberOfTechs = 39
 
 function randomNumber(min,max)
@@ -18,9 +18,10 @@ function getTechAjax() {
 }
 
 function techButtonClick() {
-  queryURL = "http://swapi.co/api/people/" + rand + "/"
+   var rand = randomNumber(0, numberOfTechs)
+  queryURL = "http://smashlounge.com/api/techs/" + rand + "/"
   console.log(queryURL)
-  getPersonAJAX()
+  getTechAjax()
 }
 
 function displayTech(data) {
@@ -34,16 +35,4 @@ function displayTech(data) {
   document.getElementById("datalist").innerHTML += textString
 
    getTechAjax()
-}
-
-
-
-
-function myFunction() {
-    var x = document.getElementById("navDemo");
-    if (x.className.indexOf("w3-show") == -1) {
-        x.className += " w3-show";
-    } else {
-        x.className = x.className.replace(" w3-show", "");
-    }
 }
