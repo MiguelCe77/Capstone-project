@@ -28,9 +28,12 @@ function displayTech(data) {
 
   var tech = data['tech']
   var info = data['description']
+  var input = data['inputs']
 
   var textString = "<p>Name: " + tech + "</br>"
   textString += "Info: " + info + "</br>"
+  textString += "Inputs: " + input + "</br>"
+
 
   document.getElementById("datalist").innerHTML += textString
 
