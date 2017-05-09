@@ -1,5 +1,5 @@
 var queryURL = "http://smashlounge.com/api/techs/"
-var numberOfTechs = 39
+var numberOfTechs = 20
 
 function randomNumber(min,max)
 {
@@ -18,8 +18,8 @@ function getTechAjax() {
 }
 
 function techButtonClick() {
-   var rand = randomNumber(0, numberOfTechs)
-  queryURL = "http://smashlounge.com/api/techs/" + rand + "/"
+  var rand = randomNumber(0, numberOfTechs)
+  queryURL = "http://smashlounge.com/api/techs/" + rand
   console.log(queryURL)
   getTechAjax()
 }
@@ -29,8 +29,8 @@ function displayTech(data) {
   var tech = data['tech']
   var info = data['description']
 
-  var textString = "<p>Name: " + name + "</br>"
-  textString += "Info: " + guide + "</br>"
+  var textString = "<p>Name: " + tech + "</br>"
+  textString += "Info: " + info + "</br>"
 
   document.getElementById("datalist").innerHTML += textString
 
