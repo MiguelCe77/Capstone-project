@@ -34,5 +34,4 @@ function displayTech(data) {
 
   document.getElementById("datalist").innerHTML += textString
 
-   getTechAjax()
 }
