@@ -1,5 +1,5 @@
 var queryURL = "http://smashlounge.com/api/techs/"
-var numberOfTechs = 20
+var numberOfTechs = 38
 
 function randomNumber(min,max)
 {
