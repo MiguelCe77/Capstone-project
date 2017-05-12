@@ -14,7 +14,7 @@
 <!-- Navbar -->
 <div class="w3-top">
   <div class="w3-bar w3- w3-card-2 w3-left-align w3-large">
-    <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-green" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+    <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-pink" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
     <a href="Capstone.html" class="w3-bar-item w3-button w3-padding-large w3-hover-white w3-text-white" >Home</a>
     <a href="Players.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-text-white ">Players</a>
     <a href="characters.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-text-white ">Characters</a>
@@ -24,7 +24,7 @@
   </div>
 
   <!-- Navbar on small screens -->
-  <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large">
+  <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large w3-pink">
     <a href="Tech.html" class="w3-bar-item w3-button w3-padding-large">Link 1</a>
     <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 2</a>
     <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 3</a>
@@ -32,7 +32,31 @@
   </div>
 </div>
 
-<header class="w3-container w3-purple  w3-center" style="padding:100px 16px">
-  <h1 class="w3-margin w3-jumbo w3-text-white">Competitive Melee</h1>
-  <p class="w3-xlarge w3-text-white">An Introduction</p>
+<header class="w3-container w3-pink  w3-center" style="padding:100px 16px">
+  <h1 class="w3-margin w3-jumbo w3-text-white">Find your Local Scene</h1>
+  <p class="w3-xlarge w3-text-white">Tournaments and Local Communities</p>
 </header>
+
+
+
+
+<!-- First Grid -->
+<div class="w3-row-padding w3-padding-64 w3-container">
+  <div class="w3-content">
+    <div class="w3-twothird">
+      <h1>Where to find tournaments and your local community.</h1>
+      <p class="w3-text-grey">Tournaments are sprouted throughout the US, Europe and Asia. They are relatively easy to find in highly populated places like Southern California and the Maryland Virginia area. Below is an input box where you can input your reigon and see the local Facebook groups associated with your area.</p>
+    </div>
+
+    <div id="programcontainer">
+      <div class="w3-row-padding w3-padding-64 w3-container" id="data">
+        <p>
+        Insert a reigon here (Southern California, Florida, MDVA,  )
+        </p>
+        <p>
+          <input type="text" id="groupname"></text>
+        </p>
+        <button class="w3-btn w3-black" id="submitbutton" onclick="groupButtonClick()">Name Reigon</button>
+        <div id="datalist">
+        </div>
+      </div>
