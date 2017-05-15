@@ -26,8 +26,8 @@ function groupButtonClick() {
 
 function displayGroup(data) {
 
-  var tech = data['tech']
-  var info = data['description']
+  var region = data['region']
+  var name = data['name']
   var input = data['inputs']
 
   var textString = "<p>Name: " + tech + "</br>"
